@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d1117" />
+  <title>⚠️ Alerta de Segurança — Simulação Educativa</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Fundo animado com partículas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ============================================================
+       LOADER — Fake System Check
+  ============================================================ -->
+  <div id="loader">
+    <div class="loader-logo">🔒 SECURITY SCAN v3.1.0</div>
+
+    <div class="loader-terminal">
+      <div class="loader-terminal-bar">
+        <span>●</span><span>●</span><span>●</span>
+        sistema_de_segurança — verificação_de_acesso
+      </div>
+      <div class="loader-body" id="terminal-body"></div>
+    </div>
+
+    <div class="loader-bar-wrap">
+      <div class="loader-bar-fill" id="loader-bar"></div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        ALERTA DE SEGURANÇA DETECTADO
+      </div>
+
+      <h1 class="hero-title">
+        <span class="glitch" data-text="⚠️ Você clicou em">⚠️ Você clicou em</span><br />
+        <span class="red glitch" data-text="um link suspeito.">um link suspeito.</span>
+      </h1>
+
+      <div class="hero-reveal reveal">
+        <p>
+          <strong>Respira fundo.</strong> Isso foi apenas uma <strong>simulação educativa</strong>
+          criada pelo colégio para mostrar como ataques de phishing funcionam na prática.
+          Você não está em perigo — mas se fosse real, poderia estar.
+        </p>
+      </div>
+
+      <a href="#signs" class="btn-primary reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        APRENDER A SE PROTEGER
+      </a>
+
+      <div class="hero-grid reveal">
+        <div class="hero-stat">
+          <div class="num">90%</div>
+          <div class="lbl">ataques via e-mail</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">3.4B</div>
+          <div class="lbl">e-mails falsos por dia</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">83%</div>
+          <div class="lbl">das empresas afetadas</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       VÍDEO EDUCATIVO
+  ============================================================ -->
+  <section id="video">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="tag tag-blue">Módulo 01</span>
+        <h2 class="section-title">Entendendo o Phishing</h2>
+        <p class="section-sub">
+          Aprenda como criminosos digitais tentam enganar pessoas usando links falsos,
+          mensagens urgentes e engenharia social.
+        </p>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-placeholder" id="video-placeholder">
+          <!-- Clique para iniciar o vídeo -->
+          <div class="play-btn" id="play-btn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--blue)">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          <div class="video-label">▶ ASSISTIR VÍDEO EDUCATIVO</div>
+        </div>
+
+        <div class="video-meta">
+          <div>
+            <h3>Como Funciona o Phishing?</h3>
+            <!-- Substitua pelo nome do seu vídeo -->
+            <p>Simulação e conscientização digital — Projeto Escolar de Segurança</p>
+          </div>
+          <span class="tag tag-green" style="margin:0;">🔒 CONTEÚDO SEGURO</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       COMO IDENTIFICAR PHISHING
+  ============================================================ -->
+  <section id="signs">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="tag tag-red">Módulo 02</span>
+        <h2 class="section-title">Como Identificar Phishing</h2>
+        <p class="section-sub">
+          Criminosos usam truques psicológicos e técnicos para enganar.
+          Conheça os 6 sinais mais comuns de um ataque de phishing.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="ph-card reveal">
+          <div class="ph-card-icon">📧</div>
+          <h3>Remetente Estranho</h3>
+          <p>O endereço usa domínios desconhecidos ou parecidos com empresas reais, como
+            <em>banco-seguro@suporte-conta.xyz</em> em vez de <em>@banco.com.br</em>.</p>
+        </div>
+
+        <div class="ph-card reveal">
+          <div class="ph-card-icon">🔗</div>
+          <h3>Links Suspeitos</h3>
+          <p>Passe o mouse sobre o link sem clicar. Se o endereço real for diferente do
+            que aparece no texto, é uma armadilha. Nunca clique em links encurtados em e-mails.</p>
+        </div>
+
+        <div class="ph-card reveal">
+          <div class="ph-card-icon">⚡</div>
+          <h3>Mensagens Urgentes</h3>
+          <p>"Sua conta será bloqueada em 24h!" Golpistas criam urgência falsa para você
+            agir sem pensar. Empresas sérias nunca exigem ação imediata por e-mail.</p>
+        </div>
+
+        <div class="ph-card reveal">
+          <div class="ph-card-icon">✏️</div>
+          <h3>Erros Ortográficos</h3>
+          <p>E-mails de phishing frequentemente apresentam erros de português, palavras
+            estranhas ou textos mal formatados. Empresas profissionais revisam suas comunicações.</p>
+        </div>
+
+        <div class="ph-card reveal">
+          <div class="ph-card-icon">🎁</div>
+          <h3>Promoções Falsas</h3>
+          <p>"Você ganhou um iPhone! Clique agora." Prêmios inesperados em e-mails são quase
+            sempre golpes. Se parece bom demais para ser verdade, provavelmente é mentira.</p>
+        </div>
+
+        <div class="ph-card reveal">
+          <div class="ph-card-icon">🔑</div>
+          <h3>Pedido de Senha</h3>
+          <p>Nenhuma empresa, banco ou serviço legítimo pedirá sua senha ou código por
+            e-mail, mensagem ou telefone. Isso é sempre tentativa de fraude, sem exceções.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       E-MAIL FALSO — Anatomia de um phishing
+  ============================================================ -->
+  <section id="fake-email">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="tag tag-red">Módulo 03</span>
+        <h2 class="section-title">Anatomia de um E-mail Falso</h2>
+        <p class="section-sub">
+          Veja como um e-mail de phishing parece real à primeira vista —
+          e onde estão os sinais que o denunciam.
+          <br><small style="color:var(--blue);font-size:.8rem;">💡 Toque nos textos sublinhados para ver as explicações.</small>
+        </p>
+      </div>
+
+      <div class="email-wrap">
+
+        <div class="email-client reveal">
+          <div class="email-bar">
+            <div class="email-dot" style="background:#ff5f57;"></div>
+            <div class="email-dot" style="background:#ffbd2e;"></div>
+            <div class="email-dot" style="background:#28ca41;"></div>
+            <span style="margin-left:8px;font-size:.7rem;color:var(--muted);font-family:'Courier New',monospace;">
+              📨 caixa de entrada
+            </span>
+          </div>
+
+          <div class="email-body">
+
+            <!-- Remetente -->
+            <div class="email-field">
+              <span class="lbl">De:</span>
+              <span class="val">
+                <div class="annotated">
+                  <span class="chip">suporte@bradesco-conta-segura.xyz</span>
+                  <div class="tooltip">⚠️ Domínio falso! Bradesco usa @bradesco.com.br</div>
+                </div>
+              </span>
+            </div>
+
+            <!-- Para -->
+            <div class="email-field">
+              <span class="lbl">Para:</span>
+              <span class="val" style="color:var(--muted);">voce@email.com</span>
+            </div>
+
+            <!-- Assunto -->
+            <div class="email-field">
+              <span class="lbl">Assunto:</span>
+              <span class="val">
+                <div class="annotated">
+                  <span class="chip">🚨 URGENTE: Sua conta será BLOQUEADA em 2h</span>
+                  <div class="tooltip">⚠️ Urgência artificial para você agir sem pensar!</div>
+                </div>
+              </span>
+            </div>
+
+            <hr class="email-divider" />
+
+            <div class="email-content">
+              <p>Prezado cliente,</p>
+              <p>
+                Identificamos uma
+                <span class="annotated">
+                  <span class="chip">actividadde suspeita</span>
+                  <div class="tooltip">⚠️ Erro ortográfico: "atividade" escrito errado</div>
+                </span>
+                em sua conta bancaria. Para garântir a segurança dos seus dados e evitar o
+                bloqueio imediato, é necessário que você confirme suas informações agora.
+              </p>
+              <p>
+                Clique no botão abaixo e acesse o
+                <span class="annotated">
+                  <span class="chip">portal-bradesco-verificacao.xyz/confirmar</span>
+                  <div class="tooltip">⚠️ URL falsa! Não é o site oficial do Bradesco</div>
+                </span>
+                para verificar sua identidade.
+              </p>
+              <a class="email-cta" href="#" onclick="return false;">VERIFICAR CONTA AGORA</a>
+              <p style="margin-top:24px;font-size:.8rem;color:var(--muted);">
+                Se não confirmar em 2 horas, sua conta será permanentemente suspensa.<br />
+                <span class="annotated" style="display:inline-block;margin-top:6px;">
+                  <span class="chip">Banco do Brasil © 2024 — Central de Segurança</span>
+                  <div class="tooltip">⚠️ Contradição! O e-mail diz Bradesco mas assina como Banco do Brasil</div>
+                </span>
+              </p>
+            </div>
+
+          </div>
+        </div><!-- /email-client -->
+
+        <!-- Legenda explicativa -->
+        <div class="email-legend reveal">
+          <div class="legend-item">
+            <div class="legend-num">1</div>
+            <p><strong>Domínio falso:</strong> o endereço de e-mail usa um domínio desconhecido
+              (.xyz) em vez do oficial da empresa.</p>
+          </div>
+          <div class="legend-item">
+            <div class="legend-num">2</div>
+            <p><strong>Urgência fabricada:</strong> o assunto em letras maiúsculas com prazo
+              curto é uma técnica clássica de manipulação psicológica.</p>
+          </div>
+          <div class="legend-item">
+            <div class="legend-num">3</div>
+            <p><strong>Erros de escrita:</strong> "actividadde" e "garântir" são erros que
+              denunciam a origem fraudulenta do golpe.</p>
+          </div>
+          <div class="legend-item">
+            <div class="legend-num">4</div>
+            <p><strong>Contradição de marcas:</strong> o e-mail cita Bradesco mas assina como
+              Banco do Brasil — uma falha fatal dos golpistas.</p>
+          </div>
+        </div>
+
+      </div><!-- /email-wrap -->
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       QUIZ
+  ============================================================ -->
+  <section id="quiz">
+    <div class="container">
+
+      <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="tag tag-blue">Módulo 04</span>
+        <h2 class="section-title">Quiz Anti-Phishing</h2>
+        <p class="section-sub" style="margin:0 auto 48px;">
+          Teste o que você aprendeu. Responda às perguntas e descubra se você está pronto
+          para se proteger online.
+        </p>
+      </div>
+
+      <div class="quiz-box reveal" id="quiz-box">
+        <div class="quiz-progress" id="quiz-progress"></div>
+        <div id="quiz-main"></div>
+        <div class="quiz-result" id="quiz-result">
+          <div style="font-size:3rem;">🏆</div>
+          <div class="result-score" id="result-score"></div>
+          <div class="result-title" id="result-title"></div>
+          <p class="result-sub" id="result-sub"></p>
+          <button class="btn-restart" onclick="startQuiz()">↺ REINICIAR QUIZ</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       ESTATÍSTICAS
+  ============================================================ -->
+  <section id="stats">
+    <div class="container">
+
+      <div class="reveal" style="text-align:center;">
+        <span class="tag tag-blue">Dados Reais</span>
+        <h2 class="section-title">O Tamanho do Problema</h2>
+        <p class="section-sub" style="margin:0 auto 48px;">
+          Phishing não é só um problema de filmes. Os números mostram a dimensão real
+          das ameaças digitais no mundo.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="stat-card reveal">
+          <div class="stat-num" data-target="90" data-suffix="%">0%</div>
+          <div class="stat-label">das violações de dados começam com um e-mail de phishing</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-num">3.4B</div>
+          <div class="stat-label">e-mails de phishing enviados por dia no mundo inteiro</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-num" data-target="323" data-suffix="%">0%</div>
+          <div class="stat-label">de aumento nos ataques de phishing desde 2020</div>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-num" data-target="17" data-suffix="s">0s</div>
+          <div class="stat-label">é o tempo médio para cair em um link de phishing bem-feito</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+
+  <!-- ============================================================
+       SEÇÃO FINAL
+  ============================================================ -->
+  <section id="final">
+    <div class="final-glow"></div>
+    <div class="reveal">
+      <span class="tag tag-green">Missão Cumprida</span>
+      <h2 class="final-title">
+        Na internet, <span class="accent">pensar antes de clicar</span>
+        é sua melhor proteção.
+      </h2>
+      <p class="final-sub">
+        Você concluiu o treinamento anti-phishing. Compartilhe esse conhecimento com sua
+        família e amigos — cada pessoa informada é uma barreira a mais contra os golpes digitais.
+      </p>
+      <a href="#hero" class="btn-back">↑ VOLTAR AO INÍCIO</a>
+      <div style="margin-top:52px;">
+        <div class="school-badge">
+          <div class="dot"></div>
+          Simulação Educativa Oficial — Projeto de Conscientização Digital Escolar
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Script -->
+  <script src="js/app.js"></script>
+
+  <!-- Inicializa player de vídeo inline -->
+  <script>
+    document.getElementById('play-btn').addEventListener('click', function () {
+      // Substitua a URL abaixo pelo link do seu vídeo no YouTube ou MP4
+      const youtubeURL = 'https://www.youtube.com/embed/SEU_VIDEO_AQUI?autoplay=1';
+      const placeholder = document.getElementById('video-placeholder');
+      placeholder.innerHTML = `
+        <iframe
+          width="100%" height="100%"
+          src="${youtubeURL}"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          style="border:none; position:absolute; inset:0;">
+        </iframe>`;
+    });
+  </script>
+
+</body>
+</html>
